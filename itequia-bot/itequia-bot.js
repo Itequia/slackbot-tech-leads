@@ -64,7 +64,7 @@ class ItequiaBot extends SlackBot {
         bot.reply(message, dialog.prOk(name))
         try {
             let req = request.replace("<","")
-            req = request.replace(">","") // to remove the formating on the links
+            req = req.replace(">","") // to remove the formating on the links
             this.sendMessageToLeads(dialog.prLeadsOk(username, req))
         }
         catch(e) {
