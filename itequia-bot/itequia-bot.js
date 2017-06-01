@@ -12,8 +12,8 @@ class ItequiaBot extends SlackBot {
     async init() {
         this.startBot (process.env.SLACK_API_TOKEN)
         this.regex = {
-            help: /(ajuda|ayuda|help|help me)/i,
-            pr: /(review|code review|pr|pull request)/i,
+            help: /(ajuda |ayuda |help me )/i,
+            pr: /(review |code review |pr |pull request )/i,
         }
     }
 
